@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 # Secret key doesn't have to be changed, it is only used for flash messages
 app.secret_key = 'secret key'
+app.config.from_envvar('WWWPELLOV_CONFIG', silent=True)
 
 setlocale(LC_ALL, 'fr_FR')
 

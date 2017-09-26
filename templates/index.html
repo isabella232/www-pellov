@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Kozea Promomaker</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/ico" href="{{ url_for('static', filename='icon/favicon.ico') }}" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Madurai:300">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static', filename='javascripts/jquery-3.2.1.min.js') }}"></script>
+	<script async src="{{ url_for('static', filename='javascripts/bootstrap.js') }}"></script>
+    <script async src="{{ url_for('static', filename='javascripts/scrollreveal.min.js') }}"></script>
+	<script>
+    var checkNavBar = function() {
+      if ($(".navbar").offset().top > 30) {
+        $(".navbar-fixed-top").addClass("sticky");
+      } else {
+        $(".navbar-fixed-top").removeClass("sticky");
+      }
+
+      checkMenu();
+    };
+
+    var checkMenu = function() {
+      var target = '#home';
+      var targets = new Array();
+
+      $('.navbar li a').each(function() {
+        targets[targets.length] = $(this).attr('href');
+      });
+
+      for (i = 0; i < targets.length; i++) {
+        if (i < targets.length - 1) {
+          if ($(targets[i]).length && $(targets[i + 1]).length) {
+            if (($(document).scrollTop() + 10 >= $(targets[i]).offset().top) && ($(document).scrollTop() <= $(targets[i + 1]).offset().top)) {
+              target = targets[i];
+            }
+          }
+        }
+      }
+
+      $('.navbar li').each(function() {
+        $(this).removeClass('active');
+        if ($('a', $(this)).attr('href') == target) $(this).addClass('active');
+      });
+    };
+
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        checkNavBar();
+      });
+      checkNavBar();
+
+      $('.navbar a').click(function(e) {
+        e.preventDefault();
+
+        var target = $(this).attr('href');
+        $('html, body').animate({
+          scrollTop: $(target).offset().top
+        },
+        'slow',
+        function() {
+          checkMenu();
+        });
+
+        return false;
+      });
+
+      var config = {
+        viewFactor : 0.15,
+        duration   : 800,
+        distance   : "0px",
+        scale      : 0.8,
+      }
+      var block = {
+        /*reset: true,*/
+        /*viewOffset: { top: 64 }*/
+      }
+      window.sr = ScrollReveal(config);
+      sr.reveal('#fonctionnalites', block);
+      sr.reveal('#parallax', block);
+      sr.reveal('#avantages', block);
+      srpropos.reveal('#relais', block);
+      sr.reveal('#a-', block);
+      sr.reveal('#contact', block);
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+      $('#navbar a').click(function() {
+        $("#navbar").removeClass("in");
+      });
+    });
+    </script>
+  </head>
+
+  <body class="pull_top">
+    <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container-fluid container-nav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-koz-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#home" class="navbar-brand"><strong>Kozea Promomaker</strong></a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-koz-collapse" id="navbar" role="navigation">
+          <ul class="nav navbar-nav navbar-right test" >
+            <li class="active"><a href="#home">Accueil</a></li>
+            <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+            <li><a href="#avantages">Avantages</a></li>
+            <li><a href="#relais">Mode d'emploi</a></li>
+            <li><a href="#a-propos">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div id="home" class="row">
+        <div class="col-xs-12">
+          <div id="concepteur">
+            <img src="{{ url_for('static', filename='images/fond-concepteur.jpg') }}" alt="Promomaker, concepteur de PLV pour pharmacies" class="img-responsive" />
+
+            <h2 id="concepteurText"> Concepteur de <span class="red-promomaker">PLV&nbsp;*</span><br/>
+              <span class="small">Créer et diffuser des campagnes de communication<br/>et de promotion pour vos pharmacies</span>
+            </h2>
+
+            <div class="note">*&nbsp;Publicité sur Lieu de Vente</div>
+          </div>
+        </div>
+      </div>
+
+      {% with message = get_flashed_messages()[0] %}
+        {% if message %}<div id="flash" class="row"><p>{{ message }}</p></div>{% endif %}
+      {% endwith %}
+
+      <div id="simple-groupement" class="row">
+        <div class="col-xs-12">
+          <h4>Simple pour votre groupement, accessible par tous vos pharmaciens adhérents</h4>
+          <p>Promomaker est un outil innovant qui permet de gérer facilement sa PLV en pharmacie<br/>en créant des affiches promotionnelles automatiquement.</p>
+        </div>
+      </div>
+
+      <div id="fonctionnalites">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="section-title">Des fonctionnalités adaptées<br/>à la création de vos promotions</h3>
+          </div>
+        </div>
+
+        <ul class="fonctionnalites row">
+          <li class="bdd col-xs-12 col-sm-4 col-md-3 col-md-offset-4">Base de données <span class="red-promomaker">de plus de 8000 produits</span></li>
+          <li class="douchette col-xs-12 col-sm-4 col-md-4">Utilisation possible de la douchette pour <span class="red-promomaker">une intégration automatique du produit</span></li>
+          <li class="baguette col-xs-12 col-sm-4 col-md-3">Création automatique <span class="red-promomaker">de l'affiche</span></li>
+
+          <li class="pdf col-xs-12 col-sm-4 col-md-3 col-md-offset-4">Convertisseur <span class="red-promomaker">PDF</span></li>
+          <li class="impression col-xs-12 col-sm-4 col-md-4">Choix du format d'impression <span class="red-promomaker">(du A0 au A7)</span></li>
+          <li class="automatisation col-xs-12 col-sm-4 col-md-3">Automatisation de campagnes <span class="red-promomaker">de communication</span></li>
+        </ul>
+      </div>
+
+      <div id="parallax" class="row"></div>
+
+      <div id="avantages">
+        <div id="avantages-mobile">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="section-title">Avantages</h3>
+            </div>
+          </div>
+
+          <ul class="avantages row">
+            <li class="col-xs-12"><h4>Pour votre groupement</h4></li>
+            <li class="left col-xs-12 col-sm-6"><span class="visuel"><span>Un visuel personnalisé<br/>selon votre groupement</span></span></li>
+            <li class="right col-xs-12 col-sm-6"><span class="interface"><span>Interface claire<br/>et simple d'utilisation</span></span></li>
+
+            <li class="col-xs-12"><h4>Accessible pour tous</h4></li>
+            <li class="left no-padding-bottom col-xs-12 col-sm-6"><span class="acces"><span>Accès personnalisé groupement</span></span></li>
+            <li class="right col-xs-12 col-sm-6"><span class="web"><span>Disponible sur le web</span></span></li>
+            <li class="left add-padding-bottom col-xs-12 col-sm-6"><span class="campagne"><span>Toutes les campagnes sont stockées<br/>sur la plateforme Promomaker</span></span></li>
+            <li class="right col-xs-12 col-sm-6"><span class="adherent"><span>Accès personnalisé adhérent</span></span></li>
+            <li class="right add-padding-top col-xs-12 col-sm-6"><span class="partage"><span>Partage de documents<br/>personnalisés</span></span></li>
+
+            <li class="col-xs-12"><h4>Sécurité</h4></li>
+            <li class="left no-padding-top col-xs-12 col-sm-6"><span class="securite"><span>Données cryptées et sécurisées</span></span></li>
+          </ul>
+        </div>
+
+        <div id="avantages-pc">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="section-title">Avantages</h3>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5 col-md-5 col-lg-5">
+              <div class="avantage-h4-title">
+                <h4><b>Accessible pour tous</b></h4>
+              </div>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1920 1080">
+                <image xlink:href="{{ url_for('static', filename='images/Promomaker-avantages-liste-left.svg') }}" width="800" height="785" y="80"></image>
+                <text class="text-avantages" x="500" y="130">Disponible sur le Web</text>
+                <text class="text-avantages" x="500" y="310">Accès personnalisé groupement</text>
+                <text class="text-avantages" x="500" y="490">Accès personnalisé adhérent</text>
+                <text class="text-avantages" x="500" y="670">Toutes les campagnes sont stockées sur la <tspan dy="80" x="500">plateforme Promomaker</tspan></text>
+                <text class="text-avantages" x="500" y="850">Partage de document personnalisé</text>
+              </svg>
+            </div>
+
+            <div class="right col-sm-5 col-md-5 col-lg-5">
+              <div class="avantage-h4-title">
+                <h4><b>Pour votre groupement</b></h4>
+              </div>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1920 600">
+                <image xlink:href="{{ url_for('static', filename='images/Promomaker-avantages-liste-right-1.svg') }}" width="800" height="230" y="80"></image>
+                <text class="text-avantages" x="500" y="120">Interface claire et simple <tspan dy="80" x="500">d'utilisation</tspan></text>
+                <text class="text-avantages" x="500" y="300">Un visuel personnalisé selon <tspan dy="80" x="500">votre groupement</tspan></text>
+              </svg>
+
+              <div class="avantage-h4-title-right">
+                <h4><b>Sécurité</b></h4>
+              </div>
+
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1920 1080" style="margin-bottom: -15vw;">
+                <image xlink:href="{{ url_for('static', filename='images/Promomaker-avantages-liste-right-2.svg') }}" alt="Promomaker, données sécurisées" width="800" height="140" y="80"></image>
+                <text class="text-avantages" x="500" y="160">Données cryptées et sécurisées</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="relais" class="row">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="section-title">Un relais assuré<br/>de votre communication groupement</h3>
+            </div>
+          </div>
+
+          <ul class="relais row">
+            <li class="gauche first col-xs-12 col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-3"><span class="visuel baguette"></span><span class="label">Le groupement<br/>crée les affichettes<br/>avec Promomaker</span></li>
+            <li class="droite first col-xs-12 col-sm-4 col-md-4 col-lg-3"><span class="visuel enveloppe"></span><span class="label">et envoie les campagnes<br/>promotionnelles aux pharmaciens<br/>adhérents via Promomaker</span></li>
+
+            <li class="gauche col-xs-12 col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-3"><span class="visuel enveloppe-open"></span><span class="label">Le pharmacien reçoit<br/>par mail les campagnes<br/>promotionnelles à venir</span></li>
+            <li class="droite col-xs-12 col-sm-4 col-md-4 col-lg-3"><span class="visuel fiche-select"></span><span class="label">Il sélectionne les affichettes<br/>de son choix à imprimer en<br/>pharmacie ou chez l'imprimeur</span></li>
+
+            <li class="gauche col-xs-12 col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-3"><span class="visuel fiche-multiple"></span><span class="label">Il choisit les formats<br/>d'impression<br/>et la quantité</span></li>
+            <li class="droite col-xs-12 col-sm-4 col-md-4 col-lg-3"><span class="visuel telecharge"></span><span class="label">Il télécharge<br/>les affichettes<br/>au format PDF</span></li>
+
+            <li class="gauche last col-xs-12 col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-3 col-lg-3 col-lg-offset-3"><span class="visuel hand-ok"></span><span class="label">Les campagnes promotionnelles<br/>sont pilotées<br/>en toute simplicité</span></li>
+            <li class="end col-xs-12 col-sm-4 col-md-4 col-lg-3"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="a-propos">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="section-title">À propos</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-md-offset-1 col-lg-5 col-lg-offset-1"><img src="{{ url_for('static', filename='images/kozea-group.jpg') }}" alt="Kozea group" title="Kozea group" class="img-responsive-propos" /></div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-lg-offset-1">
+            <p>Promomaker est un service pensé et réalisé par <a href="https://www.kozea.fr" class="brand-ap"><strong>Kozea group</strong></a>.</p>
+            <p><strong>Kozea group</strong> s'est penché sur l'élaboration de Promomaker à la suite d'une demande spécifique d'un groupement de pharmaciens qui souhaitait avoir un outil de
+              création et de diffusion de campagnes promotionnelles.</p>
+              <p>Le prototype de Promomaker a été créé en une semaine à l'aide d'un <strong>design print</strong>, suivi de tests utilisateurs auprès des pharmaciens du groupement pour valider la viabilité du projet.</p>
+            <p>Véritable incubateur de solutions digitales innovantes, <strong>Kozea group</strong> a la volonté de s'imposer comme un acteur majeur de la e-santé grâce à des innovations comme Promomaker.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="row">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-12">
+              <h3 class="section-title">Contact</h3>
+            </div>
+          </div>
+
+          <form action="{{ url_for('contact') }}" class="form-inline" method="post">
+            <div class="form-group">
+              <label for="lastname">lastname*</label>
+              <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Nom*">
+            </div>
+
+            <div class="form-group">
+              <label for="firstname">Prénom*</label>
+              <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prénom*">
+            </div>
+
+            <div class="form-group">
+              <label for="company">Société*</label>
+              <input type="text" class="form-control" id="company" name="company" placeholder="Société*">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresse email*</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Adresse email*">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Téléphone*</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Téléphone*">
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-default">Envoyer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="footer" class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6">
+          <button type="button" id="mentionsButton" data-toggle="modal" data-target="#myModal">Mentions légales</button>-&nbsp;<strong>Promomaker</strong>, une marque <a href="https://www.kozea.fr/" class="kozea">kozea</a></div>
+        <div class="col-xs-12 col-sm-4 col-md-3">
+          <ul class="social">
+            <li><a target="_blank" href="https://www.facebook.com/kozeagroup/"><i class="fa fa-facebook"></i><span>facebook</span></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/company/kozeagroup"><i class="fa fa-linkedin"></i><span>linkedin</span></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCx5VGRSsjpRWhc55EpI_gEw"><i class="fa fa-youtube"></i><span>youtube</span></a></li>
+            <li><a target="_blank" href="https://twitter.com/Kozeagroup"><i class="fa fa-twitter"></i><span>twitter</span></a></li>
+            <li><a target="_blank" href="https://fr.pinterest.com/kozeagroup/"><i class="fa fa-pinterest-p"></i><span>pinterest</span></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/kozea/"><i class="fa fa-instagram"></i><span>instagram</span></a></li>
+            <li><a target="_blank" href="https://github.com/Kozea"><i class="fa fa-github"></i><span>github</span></a></li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3">&copy;&nbsp;Kozea 2017 - Tous droits réservés</div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Mentions Légales</h4>
+          </div>
+          <div class="modal-body">
+            <p><strong>Hébergeur:</strong> Online, BP 438, 75366 Paris CEDEX 08, 01 84 13 00 00<br>
+              <strong>Responsable de la publication :</strong> Philippe Donadieu<br>
+              <strong>Raison sociale :</strong> Kozea<br>
+              <strong>Forme juridique :</strong> S.À.R.L. unipersonnelle<br>
+              <strong>SIREN :</strong> 508 023 694<br>
+              <strong>Adresse :</strong> 107 boulevard Stalingrad, 69100 Villeurbanne<br>
+              <strong>Capital social :</strong> 33 000 €<br>
+              <strong>Numéro de TVA intracommunautaire :</strong> FR13 508023694</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="modalClose" data-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

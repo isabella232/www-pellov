@@ -12978,13 +12978,20 @@ a {
 }
 
 #simple-groupement iframe {
+  height: 315px;
   margin-top: 2em;
+  width: 560px;
 }
 
 @media (max-width: 767px) {
 
   #simple-groupement p {
     font-size: 12px;
+  }
+  #simple-groupement iframe {
+    height: 177px;
+    width: 280px;
+    max-width: 100%;
   }
 }
 

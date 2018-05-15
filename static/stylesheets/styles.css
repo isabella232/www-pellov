@@ -13828,6 +13828,22 @@ a {
 #contact form .form-group {
   width: 16%;
 }
+
+#contact .form-group-data {
+  font-size: .75em;
+  margin: 2em 0;
+  width: 100%;
+}
+
+#contact .form-group-data label {
+  display: inline-block;
+}
+
+#contact .form-group-data input {
+  display:inline-block;
+  width: auto;
+}
+
 @media (max-width: 767px) {
 
   #contact form .form-group {

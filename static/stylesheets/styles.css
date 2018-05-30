@@ -1966,12 +1966,14 @@ h4, .h4 {
 
 
 h5, .h5 {
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 
 h6, .h6 {
-  font-size: 17px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 
@@ -7963,6 +7965,10 @@ button.close {
   .modal-lg {
     width: 900px;
   }
+}
+
+.modal a {
+  color: inherit;
 }
 
 .tooltip {

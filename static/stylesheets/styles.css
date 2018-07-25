@@ -1966,12 +1966,14 @@ h4, .h4 {
 
 
 h5, .h5 {
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 
 h6, .h6 {
-  font-size: 17px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 
@@ -7965,6 +7967,10 @@ button.close {
   }
 }
 
+.modal a {
+  color: inherit;
+}
+
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -12978,13 +12984,20 @@ a {
 }
 
 #simple-groupement iframe {
+  height: 315px;
   margin-top: 2em;
+  width: 560px;
 }
 
 @media (max-width: 767px) {
 
   #simple-groupement p {
     font-size: 12px;
+  }
+  #simple-groupement iframe {
+    height: 177px;
+    width: 280px;
+    max-width: 100%;
   }
 }
 
@@ -13821,6 +13834,22 @@ a {
 #contact form .form-group {
   width: 16%;
 }
+
+#contact .form-group-data {
+  font-size: .75em;
+  margin: 2em 0;
+  width: 100%;
+}
+
+#contact .form-group-data label {
+  display: inline-block;
+}
+
+#contact .form-group-data input {
+  display:inline-block;
+  width: auto;
+}
+
 @media (max-width: 767px) {
 
   #contact form .form-group {

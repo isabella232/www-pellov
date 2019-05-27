@@ -96,6 +96,22 @@
       });
     });
     </script>
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.www.promomaker.fr"]);
+      _paq.push(["setDomains", ["*.www.promomaker.fr"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://pharminfo.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '3']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/pharminfo.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
   </head>
 
   <body class="pull_top">
@@ -387,6 +403,13 @@
               la collecte, du traitement et de la conservation de données
               personnelles. Il garantit aussi les droits pour les personnes
               concernées.
+            </p>
+            <p>
+              Kozea recueille des statistiques anonymes de visites ne
+              nécessitant pas de consentement explicite. Si vous souhaitez ne
+              pas être comptabilisé dans ces données statistiques, vous pouvez
+              <a href="https://pharminfo.matomo.cloud/index.php?module=CoreAdminHome&action=optOut&language=fr">vous exclure</a>
+              de ces statistiques.
             </p>
             <p>
               Kozea est une société du groupe Pegasus Network.

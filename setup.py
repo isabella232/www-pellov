@@ -18,7 +18,7 @@ setup(
     scripts=['pellov.py'],
     install_requires=[
         'Flask',
-        'mandrill',
+        'mandrill-37',
     ],
     tests_require=tests_requirements,
     extras_require={'test': tests_requirements}

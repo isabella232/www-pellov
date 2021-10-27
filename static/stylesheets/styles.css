@@ -13932,6 +13932,14 @@ a {
   text-decoration: underline;
 }
 
+#footer #cookiesButton {
+  text-decoration: none;
+}
+
+#footer #cookiesButton:hover {
+  color: #ef5451
+}
+
 #footer a.kozea {
   display: inline-block;
   width: 135px;

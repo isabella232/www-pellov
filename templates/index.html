@@ -112,6 +112,34 @@
         g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/pharminfo.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
+    <script src="{{ url_for('static', filename='tarteaucitron/tarteaucitron.js') }}"></script>
+    <script type="text/javascript">
+      tarteaucitron.init({
+        "privacyUrl": "",
+        "hashtag": "#tarteaucitron",
+        "cookieName": "tarteaucitron",
+        "orientation": "middle",
+        "groupServices": false,
+        "showAlertSmall": false,
+        "cookieslist": false,
+        "closePopup": false,
+        "showIcon": false,
+        //"iconSrc": "",
+        "iconPosition": "BottomRight",
+        "adblocker": false,
+        "DenyAllCta" : true,
+        "AcceptAllCta" : true,
+        "highPrivacy": true,
+        "handleBrowserDNTRequest": false,
+        "removeCredit": false,
+        "moreInfoLink": true,
+        "useExternalCss": false,
+        "useExternalJs": false,
+        //"cookieDomain": "",
+        "readmoreLink": "",
+        "mandatory": true,
+      });
+    </script>
   </head>
 
   <body class="pull_top">
@@ -360,6 +388,7 @@
 
       <div id="footer" class="row">
         <div class="col-xs-12 col-sm-8 col-md-6">
+          <a href="#tarteaucitron" id="cookiesButton">Cookies</a>
           <button type="button" id="mentionsButton" data-toggle="modal" data-target="#myModal">Mentions légales</button>-&nbsp;<strong>Promomaker</strong>, une marque <a href="https://www.kozea.fr/" class="kozea">kozea</a></div>
         <div class="col-xs-12 col-sm-4 col-md-3">
           <ul class="social">
@@ -492,5 +521,9 @@
 
       </div>
     </div>
+    <script type="text/javascript">
+      tarteaucitron.user.getguanty = '101338043';
+      (tarteaucitron.job = tarteaucitron.job || []).push('getquanty');
+    </script>
   </body>
 </html>

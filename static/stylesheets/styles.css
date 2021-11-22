@@ -5956,7 +5956,6 @@ tbody.collapse.in {
 @media (min-width: 768px) {
 
   .navbar-nav {
-    float: left;
     margin: 0;
   }
 
@@ -6113,6 +6112,10 @@ tbody.collapse.in {
   }
 }
 
+.navbar-right li a {
+  font-family:"Montserrat"!important;
+}
+
 @media (min-width: 768px) {
 
   .navbar-left {
@@ -6121,9 +6124,12 @@ tbody.collapse.in {
 
 
   .navbar-right {
-    float: right !important;
+    display: flex;
+    text-align: center;
     margin-right: -15px;
+    justify-content: center;
   }
+
 
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -12758,9 +12764,6 @@ a {
   }
 }
 
-.navbar ul.nav {
-  margin-right: 30px;
-}
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar ul.nav {
    margin-right: 0px;
@@ -13441,7 +13444,7 @@ a {
   background-position-y: 20%;
   background-size: 40px;
 }
-}
+
 
 
 @media (max-width: 411px) {

@@ -12719,35 +12719,42 @@ a {
 
 .navbar .navbar-header a.navbar-brand {
   position: absolute;
-  top: 100px;
-  left: 35px;
+  /* top: 100px; */
+  /* left: 35px; */
   background-image: url("../images/logo-promomaker-blanc.png");
   background-repeat: no-repeat;
-  background-size: 250px auto;
+  /* background-size: 250px auto; */
   display: block;
-  width: 312px;
-  height: 153px;
+  /* width: 312px; */
+  /* height: 153px; */
   text-indent: -5000px;
   transition: background-size linear .5s;
+
+  top: 10px;
+  background-size: 100px auto;
+  width: 112.15686275px;
+  height: 55px;
+  left: 5px;
 }
+
 @media (max-width: 767px) {
 
   .navbar .navbar-header a.navbar-brand {
-    top: 5px;
+    /* top: 5px;
     left: 5px;
     background-size: 91.76470588px auto;
     width: 91.76470588px;
-    height: 45px;
+    height: 45px; */
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
 
   .navbar .navbar-header a.navbar-brand {
-    top: 80px;
+    /* top: 80px;
     left: 20px;
     background-size: 110px auto;
     width: 152.94117647px;
-    height: 75px;
+    height: 75px; */
   }
    .navbar {
     font-size: 13px;
@@ -12756,11 +12763,11 @@ a {
 @media (min-width: 992px) and (max-width: 1199px) {
 
   .navbar .navbar-header a.navbar-brand {
-    top: 80px;
+    /* top: 80px;
     left: 25px;
     background-size: 150px auto;
     width: 244.70588235px;
-    height: 120px;
+    height: 120px; */
   }
 }
 
@@ -12830,10 +12837,10 @@ a {
 @media (min-width: 768px) {
 
   .navbar.sticky .navbar-header a.navbar-brand {
-    top: 10px;
+    /* top: 10px;
     background-size: 100px auto;
     width: 112.15686275px;
-    height: 55px;
+    height: 55px; */
   }
 }
 @media (max-width: 767px) {
@@ -12876,12 +12883,28 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #ffffff;
+  /* color: #ffffff;
+   */
+  color: #ef5451;
   font-family:"Montserrat";
-  font-size: 50px;
+  /* font-size: 50px; */
+  font-size: 28px;
   font-weight: bold;
-  text-transform: uppercase;
+  /* font-weight: 800; */
+  /* text-transform: uppercase; */
 }
+
+#concepteur h2::before {
+  /* background: #000; */
+  background: url("../images/logo-promomaker-blanc.png") no-repeat center;
+  background-size: contain;
+  content: '';
+  display: block;
+  height: 150px;
+  margin: 0 auto;
+  width: 200px;
+}
+
 @media (max-width: 767px) {
 
   #concepteur h2 {
@@ -12914,7 +12937,8 @@ a {
 
 #concepteur h2 span.small {
   text-transform: none;
-  font-size: 24px;
+  font-size: 35px;
+  line-height: 1.5;
 }
 @media (max-width: 767px) {
 

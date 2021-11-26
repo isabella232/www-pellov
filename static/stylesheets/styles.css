@@ -12878,24 +12878,14 @@ a {
 }
 
 #concepteur h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /* color: #ffffff;
-   */
   color: #ef5451;
   font-family:"Montserrat";
-  /* font-size: 50px; */
   font-size: 28px;
   font-weight: bold;
-  /* font-weight: 800; */
-  /* text-transform: uppercase; */
+  text-align: center;
 }
 
 #concepteur h2::before {
-  /* background: #000; */
   background: url("../images/logo-promomaker-blanc.png") no-repeat center;
   background-size: contain;
   content: '';
@@ -12905,52 +12895,10 @@ a {
   width: 200px;
 }
 
-@media (max-width: 767px) {
-
-  #concepteur h2 {
-    top: 30px;
-    left: 0;
-    transform: translate(0, 0);
-    width: 100%;
-    font-size: 16px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-
-  #concepteur h2 {
-    transform: translate(0, 0);
-    width: 100%;
-    left: 0;
-    top: 90px;
-    font-size: 40px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-
-  #concepteur h2 {
-    transform: translate(0, 0);
-    width: 100%;
-    left: 0;
-    top: 160px;
-  }
-}
-
 #concepteur h2 span.small {
   text-transform: none;
   font-size: 35px;
   line-height: 1.5;
-}
-@media (max-width: 767px) {
-
-  #concepteur h2 span.small {
-    font-size: 14px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-
-  #concepteur h2 span.small {
-    font-size: 24px;
-  }
 }
 
 #concepteur div.note {
@@ -14102,4 +14050,21 @@ button .navbar-toggle .pull-right {
     opacity: 0;
     right: -30em;
   }
+}
+
+#concepteur {
+  background: url("../images/fond-concepteur.jpg") no-repeat;
+  background-size: cover;
+  padding: 10em 0;
+}
+
+@media (max-width: 991px) {
+  #concepteur {
+    padding: 5em 0;
+  }
+}
+
+#concepteurText {
+  margin: 0 auto;
+  max-width: 65%;
 }

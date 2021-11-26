@@ -12987,94 +12987,56 @@ a {
   }
 }
 
-@media (min-width: 1441px) {
-#fonctionnalites ul.fonctionnalites li.douchette {
-  background-image: url("../images/pictos/douchette.svg");
-  background-size: 90px;
-  background-position-x: 50%;
-  background-position-y: 40%;
-}
-#fonctionnalites ul.fonctionnalites li.impression{
-  background-image: url("../images/pictos/impression.svg");
-    background-size: 100px;
-    background-position-x: 50%;
-    background-position-y: 50%;
-}
-}
-
-@media (min-width: 992px) and (max-width: 1440px) {
-#fonctionnalites ul.fonctionnalites li.douchette {
-  background-image: url("../images/pictos/douchette.svg");
-  background-size: 90px;
-  background-position-x: 50%;
-  background-position-y: 30%;
-}
-#fonctionnalites ul.fonctionnalites li.impression {
-  background-image: url("../images/pictos/impression.svg");
-    background-size: 100px;
-    background-position-x: 50%;
-    background-position-y: 40%;
-}
-}
-
-@media (min-width: 768px) {
-
-  #fonctionnalites {
-  text-align: center;
-}
-
-#fonctionnalites ul.fonctionnalites {
-  list-style: none;
-  margin: 4% 0 4% 0;
-  padding: 0 0 7% 0;
-}
-
-#fonctionnalites ul.fonctionnalites li {
-  padding-top: 300px;
-  background-repeat: no-repeat;
-}
-
-  #fonctionnalites ul.fonctionnalites li {
-    padding-top: 145px;
-  }
 
 #fonctionnalites ul.fonctionnalites li span.red-promomaker {
   display: block;
 }
 
+#fonctionnalites ul.fonctionnalites li {
+  background-size: 90px;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 30%;
+  padding-top: 300px;
+  padding-top: 145px;
+}
+
 #fonctionnalites ul.fonctionnalites li.bdd {
   background-image: url("../images/pictos/bdd.svg");
-  background-size: 500px;
-  background-position: 50%;
 }
 
-
-#fonctionnalites ul.fonctionnalites li.baguette {
-  background-image: url("../images/pictos/baguette.svg");
-  background-size: 1100px;
-  background-position-x: 50%;
-  background-position-y: 51%;
-}
-
-#fonctionnalites ul.fonctionnalites li.pdf {
-  background-image: url("../images/pictos/pdf.svg");
-  background-size: 130px;
-  background-position: 50%;
-}
-
-#fonctionnalites ul.fonctionnalites li.automatisation {
-  background-image: url("../images/pictos/automatisation.svg");
-  background-size: 500px;
-  background-position-y: 60%;
-  background-position-x: 50%;
+#fonctionnalites ul.fonctionnalites li.douchette {
+  background-image: url("../images/pictos/douchette.svg");
 }
 
 #fonctionnalites ul.fonctionnalites li.impression {
   background-image: url("../images/pictos/impression.svg");
-    background-size: 100px;
-    background-position-x: 50%;
-    background-position-y: 40%;
 }
+
+#fonctionnalites ul.fonctionnalites li.baguette {
+  background-image: url("../images/pictos/baguette.svg");
+}
+
+#fonctionnalites ul.fonctionnalites li.pdf {
+  background-image: url("../images/pictos/pdf.svg");
+}
+
+#fonctionnalites ul.fonctionnalites li.automatisation {
+  background-image: url("../images/pictos/automatisation.svg");
+}
+
+
+@media (min-width: 768px) {
+
+  #fonctionnalites {
+    text-align: center;
+  }
+
+  #fonctionnalites ul.fonctionnalites {
+    list-style: none;
+    margin: 4% 0 4% 0;
+    padding: 0 0 7% 0;
+  }
 }
 
 
@@ -13107,38 +13069,38 @@ a {
 
 #fonctionnalites ul.fonctionnalites li.bdd {
   background-image: url("../images/pictos/bdd.svg");
-  background-size: 500px;
-  background-position: 50%;
+  /* background-size: 500px; */
+  /* background-position: 50%; */
 }
 
 #fonctionnalites ul.fonctionnalites li.douchette {
   background-image: url("../images/pictos/douchette.svg");
-    background-size: 90px;
-    background-position-x: 50%;
-    background-position-y: 30%;
+    /* background-size: 90px; */
+    /* background-position-x: 50%; */
+    /* background-position-y: 30%; */
 }
 
 #fonctionnalites ul.fonctionnalites li.baguette {
   background-image: url("../images/pictos/baguette.svg");
-  background-size: 1100px;
-  background-position: 50%;
+  /* background-size: 1100px; */
+  /* background-position: 50%; */
 }
 
 #fonctionnalites ul.fonctionnalites li.pdf {
   background-image: url("../images/pictos/pdf.svg");
-  background-size: 130px;
-  background-position: 50%;
+  /* background-size: 130px; */
+  /* background-position: 50%; */
 }
 #fonctionnalites ul.fonctionnalites li.impression {
   background-image: url("../images/pictos/impression.svg");
-  background-size: 100px;
-  background-position: 50%;
+  /* background-size: 100px; */
+  /* background-position: 50%; */
 }
 
 #fonctionnalites ul.fonctionnalites li.automatisation {
   background-image: url("../images/pictos/automatisation.svg");
-  background-size: 500px;
-  background-position: 50%;
+  /* background-size: 500px; */
+  /* background-position: 50%; */
 }
 
 }
@@ -13158,15 +13120,15 @@ a {
   }
   #fonctionnalites ul.fonctionnalites li.douchette {
   background-image: url("../images/pictos/douchette.svg");
-  background-size: 90px;
-  background-position-x: 50%;
-  background-position-y: 30%;
+  /* background-size: 90px; */
+  /* background-position-x: 50%; */
+  /* background-position-y: 30%; */
 }
 .douchette .col-xs-12 .col-sm-4 .col-md-4 {
   background-image: url("../images/pictos/douchette.svg");
-  background-size: 90px;
-  background-position-x: 50%;
-  background-position-y: 30%;
+  /* background-size: 90px; */
+  /* background-position-x: 50%; */
+  /* background-position-y: 30%; */
 }
 }
 

@@ -12987,16 +12987,17 @@ a {
   }
 }
 
-
-#fonctionnalites ul.fonctionnalites li span.red-promomaker {
-  display: block;
+#fonctionnalites ul.fonctionnalites {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #fonctionnalites ul.fonctionnalites li {
-  background-size: 90px;
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 30%;
+  font-family:"Montserrat", sans-serif;
   padding-top: 300px;
   padding-top: 145px;
 }
@@ -13034,7 +13035,6 @@ a {
 
   #fonctionnalites ul.fonctionnalites {
     list-style: none;
-    margin: 4% 0 4% 0;
     padding: 0 0 7% 0;
   }
 }
@@ -13062,47 +13062,6 @@ a {
     padding-top: 145px;
     background-position: center 30px;
   }
-
-#fonctionnalites ul.fonctionnalites li span.red-promomaker {
-  display: block;
-}
-
-#fonctionnalites ul.fonctionnalites li.bdd {
-  background-image: url("../images/pictos/bdd.svg");
-  /* background-size: 500px; */
-  /* background-position: 50%; */
-}
-
-#fonctionnalites ul.fonctionnalites li.douchette {
-  background-image: url("../images/pictos/douchette.svg");
-    /* background-size: 90px; */
-    /* background-position-x: 50%; */
-    /* background-position-y: 30%; */
-}
-
-#fonctionnalites ul.fonctionnalites li.baguette {
-  background-image: url("../images/pictos/baguette.svg");
-  /* background-size: 1100px; */
-  /* background-position: 50%; */
-}
-
-#fonctionnalites ul.fonctionnalites li.pdf {
-  background-image: url("../images/pictos/pdf.svg");
-  /* background-size: 130px; */
-  /* background-position: 50%; */
-}
-#fonctionnalites ul.fonctionnalites li.impression {
-  background-image: url("../images/pictos/impression.svg");
-  /* background-size: 100px; */
-  /* background-position: 50%; */
-}
-
-#fonctionnalites ul.fonctionnalites li.automatisation {
-  background-image: url("../images/pictos/automatisation.svg");
-  /* background-size: 500px; */
-  /* background-position: 50%; */
-}
-
 }
 
 @media (max-width: 480px) {
@@ -13118,18 +13077,6 @@ a {
   #fonctionnalites ul.fonctionnalites li.pdf {
     clear: both;
   }
-  #fonctionnalites ul.fonctionnalites li.douchette {
-  background-image: url("../images/pictos/douchette.svg");
-  /* background-size: 90px; */
-  /* background-position-x: 50%; */
-  /* background-position-y: 30%; */
-}
-.douchette .col-xs-12 .col-sm-4 .col-md-4 {
-  background-image: url("../images/pictos/douchette.svg");
-  /* background-size: 90px; */
-  /* background-position-x: 50%; */
-  /* background-position-y: 30%; */
-}
 }
 
 

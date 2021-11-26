@@ -13418,6 +13418,10 @@ a {
   }
 }
 
+#a-propos-text {
+  max-width: 1200px;
+  margin: 1em auto;
+}
 
 #a-propos {
   margin-bottom: 80px;
@@ -13447,7 +13451,7 @@ a {
 
 
 #a-propos p {
-  text-align: left;
+  text-align: center;
   font-size: 20px;
 }
 

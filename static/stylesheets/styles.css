@@ -13156,290 +13156,62 @@ a {
 }
 }
 
-
-
-#avantages ul.avantages {
-  list-style: none;
-  margin: 40px 0;
-  padding: 0;
+#avantages dl {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  margin: 2em auto;
+  max-width: 1200px;
 }
 
-#avantages ul.avantages:after {
-  content: ' ';
-  display: block;
-  width: 45px;
-  height: 4px;
-  background-image: url("../images/pointille-b.png");
-  margin: 0 auto;
-}
-@media (max-width: 767px) {
-
-  #avantages ul.avantages:after {
-    display: none;
-  }
+#avantages dl dt {
+  border-top: 2px solid #e0e4e7;
+  grid-column: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.15em;
+  padding: .5em 0;
 }
 
-@media (max-width: 767px) {
-  #avantages-pc {
-    display: none;
-  }
+#avantages dl dt:first-of-type {
+  border-top: none;
 }
 
-#avantages ul.avantages li {
-  padding: 0;
+#avantages dl dd {
+  grid-column: 2;
+  padding: .5em 0 .5em 2em;
 }
 
-#avantages ul.avantages li h4 {
-  text-align: center;
-  font-style: italic;
-  margin: 45px 0 40px 0;
-}
-}
-
-@media (min-width: 768px) and (max-width: 1199px){
-
-  #avantages ul.avantages li h4 {
-    font-size: 20px;
-    margin: 45px 0 40px 0;
-  }
+#avantages dl dd::before {
+  background: #ef5451;
+  border-radius: 100%;
+  content: '';
+  display: inline-block;
+  height: 5px;
+  margin-right: .5em;
+  vertical-align: middle;
+  width: 5px;
 }
 
-@media (min-width: 1200px) {
-
-  #avantages ul.avantages li h4 {
-    margin: 12px 0 10px 0;
-  }
-}
-
-
-#avantages ul.avantages li.left {
-  clear: both;
-  background-repeat: repeat-y;
-  background-position: top right;
-  background-image: url("../images/pointille-v.png");
-  padding: 30px 0 0 0;
+#avantages dl dd:nth-of-type(6),
+#avantages dl dd:last-of-type {
+  border-top: 2px solid #e0e4e7;
 }
 
 @media (max-width: 767px) {
+  #avantages dl {
+    display: initial;
+  }
 
-  #avantages ul.avantages li.left {
-    background: none;
-    padding: 0 0 20px 0;
+  #avantages dl dt,
+  #avantages dl dd {
+    border-top: none;
+    padding: .5em 0;
+  }
+
+  #avantages dl dd:nth-of-type(6),
+  #avantages dl dd:last-of-type {
+    border-top: none;
   }
 }
-
-#avantages ul.avantages li.left > span > span:before {
-  left: auto;
-  right: -50%;
-}
-@media (max-width: 767px) {
-
-  #avantages ul.avantages li.left, #avantages ul.avantages li.right {
-    margin-bottom: 25px;
-  }
-}
-@media (min-width: 768px) {
-
-  #avantages ul.avantages li.no-padding-bottom {
-    padding-bottom: 0;
-  }
-}
-@media (min-width: 768px) {
-
-  #avantages ul.avantages li.no-padding-top {
-    padding-top: 0;
-  }
-}
-@media (min-width: 768px) {
-
-  #avantages ul.avantages li.add-padding-top {
-    padding-top: 40px;
-  }
-}
-@media (min-width: 768px) {
-
-  #avantages ul.avantages li.add-padding-bottom {
-    padding-bottom: 180px;
-  }
-}
-
-#avantages ul.avantages li > span {
-  display: block;
-  height: 160px;
-   padding-top: 80px;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-
-@media (max-width: 767px) {
-
-  #avantages ul.avantages li > span {
-    height: auto;
-  }
-}
-
-#avantages ul.avantages li > span > span {
-  width: 100%;
-  padding: 7px;
-  background-color: #ef5451;
-  text-align: center;
-  color: #ffffff;
-  display: block;
-  position: relative;
-}
-
-#avantages ul.avantages li > span.interface {
-  background-image: url("../images/pictos/interface.svg");
-  background-size: 60px;
-  background-position-y: 10%;
-}
-
-#avantages ul.avantages li > span.visuel {
-  background-image: url("../images/pictos/visuel.svg");
-  background-position-y: 28%;
-  background-size: 70px;
-}
-
-#avantages ul.avantages li > span.web {
-  background-image: url("../images/pictos/web.svg");
-  background-position-y: 28%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.acces {
-  background-image: url("../images/pictos/acces.svg");
-  background-position-y: 20%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.adherent {
-  background-image: url("../images/pictos/adherent.svg");
-  background-position-y: 20%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.campagne {
-  background-image: url("../images/pictos/campagne.svg");
-  background-position-y: 20%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.partage {
-  background-image: url("../images/pictos/partage.svg");
-  background-position-y: 20%;
-  background-size: 40px;
-}
-
-#avantages ul.avantages li > span.securite {
-  background-image: url("../images/pictos/securite.svg");
-  background-position-y: 20%;
-  background-size: 40px;
-}
-
-
-
-@media (max-width: 411px) {
-  #avantages ul.avantages li > span.campagne {
-    background-position-y: 64%;
-  }
-}
-
-@media (min-width: 768px) {
-
-#avantages ul.avantages li > span > span {
-  width: 56%;
-  padding: 7px;
-  background-color: #ef5451;
-  text-align: center;
-  color: #ffffff;
-  display: block;
-  margin: 0 28%;
-  position: relative;
-}
-
-#avantages ul.avantages li > span > span:before {
-  content: ' ';
-  display: block;
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  left: -50%;
-  background-repeat: repeat-x;
-  background-position: center left;
-  background-image: url("../images/pointille-h.png");
-}
-
-#avantages ul.avantages li > span.visuel {
-  background-image: url("../images/pictos/visuel.svg");
-  width:70%;
-  margin: 0 21% auto;
-  background-position-y: 22%;
-  background-position-x: 58%;
-  background-size: 70px;
-}
-
-#avantages ul.avantages li > span.interface {
-  background-image: url("../images/pictos/interface.svg");
-  width:70%;
-  background-position-x: 56%;
-  background-position-Y: 12%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.acces {
-  background-image: url("../images/pictos/acces.svg");
-  width:70%;
-  margin: 0 21% auto;
-  background-position-y: 8%;
-  background-position-x: 58%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.web {
-  background-image: url("../images/pictos/web.svg");
-  width:70%;
-  background-position-y: 18%;
-  background-position-x: 57%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.campagne {
-  background-image: url("../images/pictos/campagne.svg");
-  width:70%;
-  margin: 0 21% auto;
-  background-position-y: 18%;
-  background-position-X: 58%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.adherent {
-  background-image: url("../images/pictos/adherent.svg");
-  width:70%;
-  background-position-y: 16%;
-  background-position-x: 57%;
-  background-size: 50px;
-}
-
-#avantages ul.avantages li > span.partage {
-  background-image: url("../images/pictos/partage.svg");
-  width:70%;
-  background-position-y: 10%;
-  background-position-x: 57%;
-  background-size: 45px;
-}
-
-#avantages ul.avantages li > span.securite {
-  background-image: url("../images/pictos/securite.svg");
-  width:70%;
-  margin: 0 21% auto;
-  background-position-y: 7%;
-  background-position-x: 57%;
-  background-size: 40px;
-}
-}
-
 
 #relais {
   color: #ffffff;

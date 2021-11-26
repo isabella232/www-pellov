@@ -12942,8 +12942,19 @@ a {
   color: #ffffff;
   margin: 0;
   margin-bottom: 40px;
+  font-family:"Montserrat", sans-serif;
   font-size: 30px;
 }
+
+#simple-groupement h4::after {
+  background-color: #FFF;
+  content: ' ';
+  display: block;
+  height: 5px;
+  margin: 40px auto 0 auto;
+  width: 64px;
+}
+
 @media (max-width: 767px) {
 
   #simple-groupement h4 {

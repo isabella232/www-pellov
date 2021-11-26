@@ -214,73 +214,20 @@
       <div id="parallax" class="row"></div>
 
       <div id="avantages">
-        <div id="avantages-mobile">
-          <div class="row">
-            <div class="col-xs-12">
-              <h3 class="section-title">Avantages</h3>
-            </div>
-          </div>
-
-          <ul class="avantages row">
-            <li class="col-xs-12"><h4>Pour votre groupement</h4></li>
-            <li class="left col-xs-12 col-sm-6"><span class="visuel"><span>Un visuel personnalisé<br/>selon votre groupement</span></span></li>
-            <li class="right col-xs-12 col-sm-6"><span class="interface"><span>Interface claire<br/>et simple d'utilisation</span></span></li>
-
-            <li class="col-xs-12"><h4>Accessible pour tous</h4></li>
-            <li class="left no-padding-bottom col-xs-12 col-sm-6"><span class="acces"><span>Accès personnalisé groupement</span></span></li>
-            <li class="right col-xs-12 col-sm-6"><span class="web"><span>Disponible sur le web</span></span></li>
-            <li class="left add-padding-bottom col-xs-12 col-sm-6"><span class="campagne"><span>Toutes les campagnes sont stockées<br/>sur la plateforme Promomaker</span></span></li>
-            <li class="right col-xs-12 col-sm-6"><span class="adherent"><span>Accès personnalisé adhérent</span></span></li>
-            <li class="right add-padding-top col-xs-12 col-sm-6"><span class="partage"><span>Partage de documents<br/>personnalisés</span></span></li>
-
-            <li class="col-xs-12"><h4>Sécurité</h4></li>
-            <li class="left no-padding-top col-xs-12 col-sm-6"><span class="securite"><span>Données cryptées et sécurisées</span></span></li>
-          </ul>
-        </div>
-
-        <div id="avantages-pc">
-          <div class="row">
-            <div class="col-xs-12">
-              <h3 class="section-title">Avantages</h3>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-5 col-md-5 col-lg-5">
-              <div class="avantage-h4-title">
-                <h4><b>Accessible pour tous</b></h4>
-              </div>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1920 1080">
-                <image xlink:href="{{ url_for('static', filename='images/Promomaker-avantages-liste-left.svg') }}" width="800" height="785" y="80"></image>
-                <text class="text-avantages" x="500" y="130">Disponible sur le Web</text>
-                <text class="text-avantages" x="500" y="310">Accès personnalisé groupement</text>
-                <text class="text-avantages" x="500" y="490">Accès personnalisé adhérent</text>
-                <text class="text-avantages" x="500" y="670">Toutes les campagnes sont stockées sur la <tspan dy="80" x="500">plateforme Promomaker</tspan></text>
-                <text class="text-avantages" x="500" y="850">Partage de document personnalisé</text>
-              </svg>
-            </div>
-
-            <div class="right col-sm-5 col-md-5 col-lg-5">
-              <div class="avantage-h4-title">
-                <h4><b>Pour votre groupement</b></h4>
-              </div>
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1920 600">
-                <image xlink:href="{{ url_for('static', filename='images/Promomaker-avantages-liste-right-1.svg') }}" width="800" height="230" y="80"></image>
-                <text class="text-avantages" x="500" y="120">Interface claire et simple <tspan dy="80" x="500">d'utilisation</tspan></text>
-                <text class="text-avantages" x="500" y="300">Un visuel personnalisé selon <tspan dy="80" x="500">votre groupement</tspan></text>
-              </svg>
-
-              <div class="avantage-h4-title-right">
-                <h4><b>Sécurité</b></h4>
-              </div>
-
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1920 1080" style="margin-bottom: -15vw;">
-                <image xlink:href="{{ url_for('static', filename='images/Promomaker-avantages-liste-right-2.svg') }}" alt="Promomaker, données sécurisées" width="800" height="140" y="80"></image>
-                <text class="text-avantages" x="500" y="160">Données cryptées et sécurisées</text>
-              </svg>
-            </div>
-          </div>
-        </div>
+        <h3 class="section-title">Avantages</h3>
+        <dl>
+          <dt>Accessible à tous</dt>
+          <dd>Disponible sur le web</dd>
+          <dd>Accès personnalisé groupement</dd>
+          <dd>Accès personnalisé adhérent</dd>
+          <dd>Toutes les campagnes sont stockées sur la plateforme Promomaker</dd>
+          <dd>Partage de document personnalisé</dd>
+          <dt>Pour votre groupement</dt>
+          <dd>Interface claire et simple d'utilisation</dd>
+          <dd>Un visuel personnalisé selon votre groupement</dd>
+          <dt>Sécurité</dt>
+          <dd>Données cryptées et sécurisées</dd>
+        </dl>
       </div>
 
       <div id="relais" class="row">

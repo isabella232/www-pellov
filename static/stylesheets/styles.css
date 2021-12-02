@@ -100,8 +100,11 @@ dfn {
 
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+  /* font-size: 2em; */
+  /* margin: 0.67em 0;
+   */
+   margin: 0 !important;
+   padding: 0;
 }
 
 
@@ -5964,8 +5967,8 @@ tbody.collapse.in {
   }
 
   .navbar-nav > li > a {
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
   }
 }
 
@@ -6116,20 +6119,22 @@ tbody.collapse.in {
   font-family:"Montserrat"!important;
 }
 
+#navbar {
+  margin-left: auto;
+  flex: 1 100%;
+}
 @media (min-width: 768px) {
 
   .navbar-left {
     float: left !important;
   }
 
-
   .navbar-right {
     display: flex;
-    text-align: center;
-    margin-right: -15px;
+    flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
   }
-
 
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -12718,56 +12723,21 @@ a {
 }
 
 .navbar .navbar-header a.navbar-brand {
-  position: absolute;
-  /* top: 100px; */
-  /* left: 35px; */
   background-image: url("../images/logo-promomaker-blanc.png");
+  background-position: center;
   background-repeat: no-repeat;
-  /* background-size: 250px auto; */
+  background-size: 100px auto;
   display: block;
-  /* width: 312px; */
-  /* height: 153px; */
+  height: 55px;
+  margin-left: 0;
   text-indent: -5000px;
   transition: background-size linear .5s;
-
-  top: 10px;
-  background-size: 100px auto;
-  width: 112.15686275px;
-  height: 55px;
-  left: 5px;
+  width: 150px!important;
 }
 
-@media (max-width: 767px) {
-
-  .navbar .navbar-header a.navbar-brand {
-    /* top: 5px;
-    left: 5px;
-    background-size: 91.76470588px auto;
-    width: 91.76470588px;
-    height: 45px; */
-  }
-}
 @media (min-width: 768px) and (max-width: 991px) {
-
-  .navbar .navbar-header a.navbar-brand {
-    /* top: 80px;
-    left: 20px;
-    background-size: 110px auto;
-    width: 152.94117647px;
-    height: 75px; */
-  }
    .navbar {
     font-size: 13px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-
-  .navbar .navbar-header a.navbar-brand {
-    /* top: 80px;
-    left: 25px;
-    background-size: 150px auto;
-    width: 244.70588235px;
-    height: 120px; */
   }
 }
 
@@ -13671,10 +13641,36 @@ button .navbar-toggle .pull-right {
   color: #16294F !important;
 }
 .container-nav {
-  padding-bottom: 15px;
-  z-index: -1;
+  align-items: center;
   background-color: #16294F;
+  display: flex;
+  justify-content: center;
+  /* padding: 1em; */
+  z-index: -1;
 }
+
+@media (max-width: 768px) {
+  .container-nav {
+    display: block;
+  }
+
+  .navbar-toggle {
+    order: 1;
+    margin-left: auto;
+  }
+
+  h1 {
+    order: 0;
+  }
+
+  .navbar .navbar-header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.5em 0;
+    width: 100%;
+  }
+}
+
 #concepteurText {
   margin-bottom: -50px;
 }

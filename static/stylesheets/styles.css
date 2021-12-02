@@ -13064,13 +13064,6 @@ a {
   }
 }
 
-@media (max-width: 480px) {
-
-#fonctionnalites ul.fonctionnalites li.douchette {
-  white-space:nowrap;
-}
-}
-
 
 @media (min-width: 768px) and (max-width: 991px) {
 
